@@ -1,0 +1,14 @@
+<div class='mp3_player_title'>
+  <%= mp3.title %>
+  <% if request.fullpath.starts_with?("/admin") %>
+    <%= link_to "(#{t("delete")})", admin_product_mp3_url(:id => mp3.id), :confirm => t('delete_mp3_confirmation', :filename => mp3.attachment_file_name), :method => :delete  %>
+  <% end %>
+</div>
+
+<div class='mp3_player'>
+  <% flashvars = "/swf/dewplayer-mini.swf?showtime=false&mp3=#{mp3.attachment.url}" %>
+  <object type='application/x-shockwave-flash' data='<%= flashvars %>' width='160' height='20' id='dewplayer-mini'>
+    <param name='wmode' value='transparent' />
+    <param name='movie' value='<%= flashvars %>' />
+  </object>
+</div>

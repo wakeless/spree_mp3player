@@ -1,0 +1,6 @@
+en:
+  mp3_previews: Mp3 Previews
+  mp3_file: Mp3 File
+  upload_mp3: Upload an Mp3 Preview Song
+  delete_mp3_confirmation: Are you sure you want to delete %{filename}?
+  title: Title

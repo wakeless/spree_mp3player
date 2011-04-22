@@ -1,0 +1,35 @@
+h1. Spree Mp3player
+
+This is a spree extension that will allow you to upload (several) mp3s to a product. These will be shown as neat flash players in the product details.
+
+
+
+
+
+h2. Installation
+
+I assume that you already have a Rails 3 Spree application up and running. If not, the "Spree Documentation":http://spreecommerce.com/documentation will help you getting started.
+
+To make use of @digital_spree@, you need to add this line to your @Gemfile@:
+
+<pre>
+  gem 'spree_mp3player', :git => 'git://github.com/funkensturm/spree_mp3player.git', :branch => 'master'
+</pre>
+
+The following terminal commands will copy the file "spree_mp3player/db/migration/20110410134727_create_mp3s.rb":http://github.com/funkensturm/spree_mp3player/blob/master/db/migrate/20110410134727_create_digitals.rb to the corresponding directory in your Rails application and apply the migration to your database. Also the Flash player will be copied into your public folder at /rails_root/public/swf/dewplayer-mini.swf
+
+<pre>
+  rake spree_mp3player:install
+  rake db:migrate
+</pre>
+
+
+h3. License
+
+@spree_mp3player/public/swf/dewplayer-mini.swf@ is made by <a href="http://www.blup.fr">Dew</a> in <a href="http://www.alsacreations.fr/dewplayer">Alsacreations</a>. See the their website for further license information.
+
+All the rest is released under:
+
+Copyright (c) 2011 funkensturm.
+Released under the MIT License
+See "http://github.com/funkensturm/spree_mp3player/blob/master/LICENSE":LICENSE
