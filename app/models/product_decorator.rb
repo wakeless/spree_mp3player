@@ -1,4 +1,4 @@
-Product.class_eval do
+Spree::Product.class_eval do
   
   has_many :mp3s, :dependent => :destroy
   after_save :destroy_mp3s, :if => :deleted?
