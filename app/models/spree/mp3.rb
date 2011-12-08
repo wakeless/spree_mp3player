@@ -1,4 +1,4 @@
-class Mp3 < ActiveRecord::Base
+class Spree::Mp3 < ActiveRecord::Base
 
   belongs_to :product
 

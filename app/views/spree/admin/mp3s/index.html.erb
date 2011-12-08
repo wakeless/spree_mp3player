@@ -1,0 +1,8 @@
+<%= render :partial => 'spree/admin/shared/product_sub_menu' %>
+<%= render :partial => 'spree/admin/shared/product_tabs', :locals => {:current => "Mp3 Previews"} %>
+
+<%= render @mp3s %>
+<br />
+<p data-hook="links">
+    <%= link_to icon('add') + ' ' + t(:new_mp3), new_admin_product_mp3_url(@product), :id => 'new_mp3_link' %>
+</p>
