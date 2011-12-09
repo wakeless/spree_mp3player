@@ -1,6 +1,6 @@
 <div class='mp3_player_title'>
   <%= mp3.title %>
-  <% if request.fullpath.starts_with?("/admin") %>
+  <% if request.fullpath.starts_with?("/spree/admin") %>
     <%= link_to "(#{t("delete")})", admin_product_mp3_url(:id => mp3.id), :confirm => t('delete_mp3_confirmation', :filename => mp3.attachment_file_name), :method => :delete  %>
   <% end %>
 </div>
