@@ -1,5 +1,4 @@
 require 'spree_core'
-require 'spree_mp3player_hooks'
 
 module SpreeMp3player
   class Engine < Rails::Engine
